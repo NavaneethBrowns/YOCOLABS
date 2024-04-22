@@ -2,11 +2,11 @@
 
 Clone the repository
 
-API
+# API
 Install the Dependencies for the API
-npm install
+# npm install
 
-UI
+# UI
 The UI requires Angular Version 17 in your local machine
 Install the Dependencies for the UI
-npm install
+# npm install
