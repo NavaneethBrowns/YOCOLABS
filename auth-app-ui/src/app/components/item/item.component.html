@@ -1,0 +1,23 @@
+@if (itemForm) {
+    <div class="d-flex flex-column align-items-between p-4">
+        <div class="text-start my-10 ms-10">
+            <h3 class="login-title">{{mode}} Item</h3>
+        </div>
+        <form [formGroup]="itemForm" novalidate="novalidate">
+            <div class="mb-5 ">
+                <label class="form-label">Name</label>
+                <input type="type" class="form-control" id="name" name="name" autocomplete="off" required
+                    formControlName="name" autocomplete="off">
+            </div>
+            <div class="mb-5 ">
+                <label class="form-label">Description</label>
+                <div class="position-relative mb-3">
+                    <textarea class="form-control" id="description" type="text" placeholder="" name="description"
+                        autocomplete="off" formControlName="description"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary w-100 mt-3" [disabled]="!itemForm.valid" (click)="onSubmit()">{{mode |
+                titlecase}}</button>
+        </form>
+    </div>
+}
